@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Soon.css';  // Import the CSS for styling
 import AOS from 'aos';      // Import AOS
 import 'aos/dist/aos.css';  // Import AOS styles
+import comingSoonImage from './Cerca logo 0 16.png';  // Adjust the path as needed
 
 function ComingSoon() {
   const calculateTimeLeft = () => {
@@ -49,9 +50,15 @@ function ComingSoon() {
   }, []);
 
   return (
-    <div className="coming-soon-section" >
+    
+    <div className="coming-soon-section">
+  
+
       <div className="coming-soon-content" data-aos="fade-in">
+      <img src={comingSoonImage} alt="Coming Soon" className="coming-soon-image" />
+
         <h2 className="coming-soon-title" data-aos="zoom-in">
+          
           🚀 Coming Soon! <span role="img" aria-label="rocket">🚀</span>
         </h2>
         <p className="coming-soon-message" data-aos="fade-up">

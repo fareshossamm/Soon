@@ -12,14 +12,21 @@
   /* Coming Soon Content */
   .coming-soon-content {
     max-width: 900px;
-    padding:55px 40px;
+    height: auto;
+    padding:20px 40px 50px;
     background-color: #171d1f; /* Dark background */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     text-align: center;
     animation: fadeIn 1s ease-out; /* Fade-in animation */
   }
+
   
+  .coming-soon-image {
+    width: 150px; /* Adjust the size of the image */
+    height: 150px;
+    margin-bottom: 0px;
+  }
   /* Coming Soon Title */
   .coming-soon-title {
     font-size: 3rem;
@@ -115,12 +122,7 @@
     }
   }
   
-  .coming-soon-section img {
-    width: 300px;
-    margin-top: 0px;
-    opacity: 0.8;
-    animation: fadeIn 2s ease-out 1.5s;
-  }
+
   
   /* Responsive Styling */
   @media (max-width: 1024px) {
@@ -159,7 +161,8 @@
     }
   
     .coming-soon-message {
-      font-size: 1rem;
+      font-size: 25px;
+      line-height: 1.8;
     }
   
     .countdown-value {
