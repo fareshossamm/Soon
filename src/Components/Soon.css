@@ -1,0 +1,202 @@
+/* Coming Soon Section */
+.coming-soon-section {
+    background-color: #171d1f; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+  }
+  
+  /* Coming Soon Content */
+  .coming-soon-content {
+    max-width: 900px;
+    padding:55px 40px;
+    background-color: #171d1f; /* Dark background */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+  }
+  
+  /* Coming Soon Title */
+  .coming-soon-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f39c12; /* Gold color */
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+  }
+  
+  /* Coming Soon Message */
+  .coming-soon-message {
+    font-size: 25px;
+    font-weight: 300;
+    color: #ddd;
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Countdown Timer */
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Countdown Item */
+  .countdown-item {
+    text-align: center;
+    animation: zoomIn 1s ease-out;
+  }
+  
+  .countdown-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e74c3c; 
+  }
+  
+  .countdown-label {
+    font-size: 14px;  /* Smaller font size for labels */
+    font-weight: bold;
+    color: #ddd;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInImage {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .coming-soon-section img {
+    width: 300px;
+    margin-top: 0px;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-out 1.5s;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1024px) {
+    /* Coming Soon Content */
+    .coming-soon-content {
+      padding: 30px;
+      margin: 20px;
+    }
+  
+    .coming-soon-title {
+      font-size: 2.5rem;
+    }
+  
+    .coming-soon-message {
+      font-size: 1.1rem;
+    }
+  
+    .countdown-value {
+      font-size: 2.5rem;
+    }
+  
+    .countdown-label {
+      font-size: 12px; /* Smaller label font size */
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    /* Coming Soon Content */
+    .coming-soon-content {
+      margin: 50px 20px;
+    }
+  
+    .coming-soon-title {
+      font-size: 2rem;
+    }
+  
+    .coming-soon-message {
+      font-size: 1rem;
+    }
+  
+    .countdown-value {
+      font-size: 2.5rem;
+    }
+  
+    .countdown-label {
+      font-size: 10px; /* Even smaller label font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Coming Soon Section */
+    .coming-soon-section {
+      padding: 20px;
+    }
+  
+    /* Coming Soon Content */
+    .coming-soon-content {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .coming-soon-title {
+      font-size: 1.8rem;
+    }
+  
+    .coming-soon-message {
+      font-size: 0.9rem;
+    }
+  
+    .countdown-value {
+      font-size: 20px;
+    }
+  
+    .countdown-label {
+      font-size: 12px; /* Smallest label font size */
+    }
+  }
+  
