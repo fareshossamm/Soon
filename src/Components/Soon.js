@@ -7,28 +7,30 @@ import comingSoonImage from './Cerca logo 0 16.png';  // Adjust the path as need
 function ComingSoon() {
   const calculateTimeLeft = () => {
     const now = new Date();
-    const currentDay = now.getDay(); // Sunday = 0, Monday = 1, etc.
-    const targetDay = 0; // Target is next Sunday (0 = Sunday)
-    const targetHour = 12; // Target time is 12:00 PM
-
-    // Calculate the next Sunday at 12 PM
-    let timeUntilTarget = new Date(now);
-    timeUntilTarget.setDate(now.getDate() + ((targetDay - currentDay + 7) % 7)); // Next Sunday
-    timeUntilTarget.setHours(targetHour, 0, 0, 0); // Set time to Sunday at 12 PM
-
-    const difference = timeUntilTarget - now; // Get the difference in milliseconds
-
-    // If the target time is already passed today, update the target to next Sunday
+    const targetTime = new Date(now); // Start from the current time
+    targetTime.setHours(0, 0, 0, 0); // Set target time to midnight (start of the next day)
+  
+    // Set the target to 2 days from now
+    targetTime.setDate(now.getDate() + 2);
+  
+    const difference = targetTime - now; // Get the difference in milliseconds
+  
+    // If the difference is less than zero, it means the countdown is over
     if (difference <= 0) {
-      timeUntilTarget.setDate(timeUntilTarget.getDate() + 7); // Move to next week
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      };
     }
-
-    // Calculate days, hours, minutes, and seconds remaining
-    const days = Math.floor(difference / (700 * 60 * 60 * 24)); // Full days
+  
+    // Calculate the remaining days, hours, minutes, and seconds
+    const days = Math.floor(difference / (500 * 60 * 60 * 24)); // Full days
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24); // Remaining hours
     const minutes = Math.floor((difference / 1000 / 60) % 60); // Remaining minutes
     const seconds = Math.floor((difference / 1000) % 60); // Remaining seconds
-
+  
     return {
       days,
       hours,
@@ -36,6 +38,7 @@ function ComingSoon() {
       seconds,
     };
   };
+  
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
